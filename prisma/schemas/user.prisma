@@ -1,0 +1,15 @@
+model User {
+  // Discord user's id
+  id              String   @id @unique
+
+  // Just fun fields, idk
+  cash            Int      @default(100)
+  cuteness        Int      @default(1000)
+  power           Int      @default(1000)
+
+  // Allow user to use commands in development
+  allowDevCmds    Boolean  @default(false)
+
+  sentReports     Report[] @relation("SentReports")
+  receivedReports Report[] @relation("ReceivedReports")
+}
