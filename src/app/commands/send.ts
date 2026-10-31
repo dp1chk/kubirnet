@@ -1,4 +1,6 @@
 import type { ChatInputCommand, CommandMetadata, MessageCommand, CommandData } from 'commandkit';
+import { MessageFlags } from 'discord.js';
+
 
 export const command: CommandData = {
   name: 'send',
@@ -46,5 +48,5 @@ export const chatInput: ChatInputCommand = async (ctx) => {
     await channel.send(text);
   }
 
-  await ctx.interaction.reply('Отправлено');
+  await ctx.interaction.reply({ content: 'Отправлено', flags: MessageFlags.Ephemeral, });
 };

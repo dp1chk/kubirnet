@@ -4,6 +4,7 @@ declare global {
   namespace CommandKitTypes {
     interface Registry {
     "anonym": true;
+    "ask": true;
     "ping": true;
     "report_user": true;
     "send": true;
