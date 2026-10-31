@@ -6,6 +6,7 @@ declare global {
     "anonym": true;
     "ping": true;
     "report_user": true;
+    "send": true;
     }
   }
 }

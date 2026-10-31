@@ -27,8 +27,8 @@ const chatInput = async (ctx) => {
 	const message = ctx.options.getString("text", true);
 	const embed = new EmbedBuilder().setAuthor({
 		name: "Anonym",
-		iconURL: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fvector-black-question-mark-icon_940471-1422.jpg&sp=1793371038T5e0af11e90d7a57e1b1c55b382432fecb388fe496ffddbbb8430acb93f987c25"
-	}).setDescription(message).setColor("Blurple");
+		iconURL: "https://klipy.com/gifs/ado-ado-shield"
+	}).setDescription(message).setColor("DarkGrey").setFooter({ text: ctx.interaction.user.id.slice(0, 3) });
 	if (((_ctx$interaction$chan = ctx.interaction.channel) === null || _ctx$interaction$chan === void 0 ? void 0 : _ctx$interaction$chan.isTextBased()) && ctx.interaction.channel.isSendable()) {
 		await ctx.interaction.channel.send({ embeds: [embed] });
 		await ctx.interaction.reply({
